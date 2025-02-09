@@ -17,6 +17,8 @@ os.mkdir(output_directory)
 
 if os.path.exists(final_output_directory) is  False:
     os.mkdir(final_output_directory)
+if os.path.exists(source_directory) is  False:
+    os.mkdir(source_directory)
 
 # splits source gif into frames
 def gif_splitter(gif):

@@ -60,6 +60,8 @@ for file_number, each_file in enumerate(glob.glob(os.path.join(source_directory,
     os.mkdir(f"./outputBMP/{os.path.basename(each_file)[:-4]}")
     gif_splitter(each_file)
     bmp_builder(file_number) 
+    
+shutil.rmtree(output_directory)
 
 
 

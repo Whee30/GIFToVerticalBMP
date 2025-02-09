@@ -24,7 +24,8 @@ if os.path.exists(source_directory) is  False:
 def gif_splitter(gif):
     gif_being_split = imageio.get_reader(gif)
     for frame_index, frame in enumerate(gif_being_split):
-        imageio.imwrite(f"outputBMP/{os.path.basename(gif)[:-4]}/frame_{frame_index}.bmp", frame)
+        frame_index_str = f"{frame_index:02}"  
+        imageio.imwrite(f"outputBMP/{os.path.basename(gif)[:-4]}/frame_{frame_index_str}.bmp", frame)
 
 # resizes split frames into 32x32
 def bmp_builder(bmp):

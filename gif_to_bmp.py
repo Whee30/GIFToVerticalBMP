@@ -49,7 +49,7 @@ def stack_images_vertically(directory, num):
             stacked_image.paste(ind_frame, (0, y_offset))
             y_offset += 32
 
-    stacked_image.save(os.path.join(directory, gif_list[num] + '.bmp'))
+    stacked_image.save(os.path.join(final_output_directory, gif_list[num] + '.bmp'))
 
 # function to create a directory for each file and run the script against it
 for file_number, each_file in enumerate(glob.glob(os.path.join(source_directory, '*.gif'))):

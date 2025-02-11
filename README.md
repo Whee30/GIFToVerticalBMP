@@ -1,3 +1,5 @@
 This is a script to take the animated GIFs downloaded through the divoom application and format them appropriate for this adafruit project: https://learn.adafruit.com/32x32-square-pixel-display
 
 The "32x32" gifs downloaded through divoom start out as 320x320. This script pulls the frames apart, resizes them to 32x32 and then stacks them vertically which is how the adafruit project ingests them.
+
+The gifs downloaded through the divoom application are typically named in some "random" letters and numbers format. The script will ingest any number of these files at once from the source folder and output the bmp with the same name as was inputted. When I ran approximately 60 gifs through the thing it took a good 30 seconds to complete, so be patient. During the process, folders for each gif will be made which house individual frames. These "temporary" files are purged at the end of the script. If you want to keep all of the inidivual frames, simply comment out the very last line of the script where the folder containing them is removed. 
